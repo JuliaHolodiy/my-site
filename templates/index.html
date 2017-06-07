@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Index Page{% endblock %}
+{% block content %}
+    <div id="post">
+        <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'news:one_new' post.id %}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+{%endblock%}
+

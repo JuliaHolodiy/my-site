@@ -1,0 +1,11 @@
+{% extends 'base.html' %} <!-- подключаем базовый шаблон -->
+<!-- отображать название поста как title страницы-->
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+Дата: {{ timestamp }}
+Автор: {{ author }}
+<h1>{{ title }}</h1>
+<div>{{ body|safe|escape}}</div> <!-- экранировать HTML-->
+<!-- escape переводит HTML-теги, если вы использовали их
+    при написании статьи в админке -->
+{% endblock %}

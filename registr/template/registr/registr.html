@@ -1,20 +1,16 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Регистрация</title>
+{% extends "base.html" %}
+{% block content %}
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
     <form id="login" action="" method="post">
       {% csrf_token %}
       <!-- as_p для того, чтобы каждый элемент формы был с новой строки -->
         {{  form.as_p }}
         <button type="submit">Зарегистрироваться</button>
+        <h1>ГОСТИНИЦА</h1>
+        <h2>МЫ ВАМ РАДЫ</h2>
     </form>
-  </body>
-</html>
+{% endblock %}

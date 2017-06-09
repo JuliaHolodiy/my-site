@@ -1,52 +1,60 @@
-<!DOCTYPE html>
 {% load staticfiles %}
-<html>
-    <head>
-        <title>Test web blog</title>
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-{#        {% load bootstrap3 %}#}
-{#        <script src="{% bootstrap_jquery_url %}"></script>#}
-{#        {% bootstrap_javascript %}#}
-{#        {% bootstrap_css %}#}
-    </head>
-    <body>
-        <header class="clearfix">
-            <div class="container">
-                <a id="logo" href="index.html">MyHotel</a>
-                <ul class="social-icons">
-                    <button type="button" class="btn btn-info">Вход</button>
-                    <button type="button" class="btn btn-info">Регистрация</button>
-                    <button type="button" class="btn btn-info">Забронировать</button>
-                </ul>
-                <nav class="clearfix">
-                    <ul role="navigation">
-                        <li>
-                            <a href="index.html" class="activePage"><span class="icon">S</span>Главная</a>
-                        </li>
-                        <li>
-                            <a href="portfolio.html"><span class="icon">Û</span>Наши номера</a>
-                        </li>
-                        <li>
-                            <a href="page.html"><span class="icon">E</span>О нас</a>
-                        </li>
-                        <li>
-                            <a href="blog.html"><span class="icon">E</span>Услуги</a>
-                        </li>
-                        <li>
-                            <a href="contact.html"><span class="icon">M</span>Акции и предложения</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section role="banner">
-            {% block content %}{% endblock %}
-        </section>
-        <footer role="contentinfo">
-            <p>
-              <a href="index.html">ГЛАВНАЯ</a> | <a href="portfolio.html">НАШИ НОМЕРА</a> | <a href="page.html">О НАС</a> |  <a href="blog.html">УСЛУГИ</a> | <a href="contact.html">АКЦИИ И ПРЕДЛОЖЕНИЯ</a>
-            </p>
-        </footer>
-    </body>
+<html class="no-js" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>MyHotel</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta name="description" content="">
+  <link  href="http://fonts.googleapis.com/css?family=Oswald:regular" rel="stylesheet" type="text/css" >
+  <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/raphaelicons.css'%}">
+  <link rel="stylesheet" href="{% static 'css/main.css'%}">
+  <script src="{% static 'js/libs/modernizr-2.5.2.min.js'%}"></script>
+  <link href="{% static 'bootstrap3/css/bootstrap.min.css'%}" rel="stylesheet">
+</head>
+  <header class="clearfix">
+      <div class="container">
+        <a id="logo" href="index.html">MyHotel</a>
+        <ul class="social-icons">
+          <button type="button" class="btn btn-info">Вход</button>
+          <button type="button" class="btn btn-info">Регистрация</button>
+          <button type="button" class="btn btn-info">Забронировать</button>
+        </ul>
+        <nav class="clearfix">
+          <ul role="navigation">
+            <li>
+              <a href="index.html" class="activePage"><span class="icon">S</span>Главная</a>
+            </li>
+            <li>
+              <a href="portfolio.html"><span class="icon">Û</span>Наши номера</a>
+            </li>
+            <li>
+              <a href="page.html"><span class="icon">E</span>О нас</a>
+            </li>
+            <li>
+              <a href="blog.html"><span class="icon">E</span>Услуги</a>
+            </li>
+            <li>
+              <a href="contact.html"><span class="icon">M</span>Акции и предложения</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+   <section role="banner">
+     <hgroup>
+         <h1>ГОСТИНИЦА</h1>
+         <h2>МЫ ВАМ РАДЫ</h2>
+     </hgroup>
+     {% block content %}{% endblock %}
+   </section> <!-- // banner ends -->
+  <footer role="contentinfo">
+      <p>
+        <a href="index.html">ГЛАВНАЯ</a> | <a href="portfolio.html">НАШИ НОМЕРА</a> | <a href="page.html">О НАС</a> |  <a href="blog.html">УСЛУГИ</a> | <a href="contact.html">АКЦИИ И ПРЕДЛОЖЕНИЯ</a>
+      </p>
+  </footer>
+</body>
 </html>
